@@ -43,17 +43,6 @@ options.add_argument("--disable-gpu")
 driver = webdriver.Chrome(service=service, options=options)
 
 
-def put_games_to_file(live_games: str):
-    """
-    Will put the live games to a file, and see if we
-    can read the file to get any useful data.
-    """
-
-    with open("live_games.txt", "a") as file:
-        file.write(live_games)
-        file.write("\n")
-
-
 def acquire_live_games():
     """
     Will acquire the live games from the shabiki website
