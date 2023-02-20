@@ -58,7 +58,7 @@ def acquire_live_games():
     driver.find_element(By.ID, "disableLoginButtonClick").send_keys(Keys.ENTER)
 
     # Wait for the page to load
-    live_now_elem = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(
+    live_now_elem = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
         (By.CLASS_NAME, "SB-liveNow")))
 
     live_now_elem.click()
